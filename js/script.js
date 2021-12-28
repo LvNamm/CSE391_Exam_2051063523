@@ -10,15 +10,15 @@ function Submit(){
         name.parentNode.appendChild(createNodeP('Tên chỉ có thể chứa chữ và không được để trống'))
         check = false
     }
-    if(address.value =='' || /^[a-z0-9]$/.test(address.value) == false){
+    if(address.value =='' || /^[a-z0-9]{0,}$/.test(address.value) == false){
             address.parentNode.appendChild(createNodeP('Địa chỉ có thể là chữ, số và không được để trống'))
             check = false
     }
-    if(phone.value=='' ||/^[0-9]{10}$/.test(phone.value)){
+    if(phone.value=='' ||/^[0-9]$/.test(phone.value)){
         phone.parentNode.appendChild(createNodeP('sdt gồm 10 chữ số và không được để trống'))
         check = false
     }
-    if(isNaN(Khach[0].value)==false||isNaN(Khach[1].value)==false){
+    if(isNaN(Khach[0].value)==true||isNaN(Khach[1].value)==true){
         Khach[0].parentNode.parentNode.appendChild(createNodeP('Số lượng đoàn khách phải là số  và không được để trống'))
         check = false
     }
@@ -29,6 +29,13 @@ function Submit(){
     if(tour.value ==''){
         tour.parentNode.appendChild(createNodeP('Bạn Phải chọn tour'))
         check = false
+    }
+    if(check == true){
+        document.getElementById('sucess').style.display='table-row'
+        let a = document.getElementsByClassName('redp')
+        for(let i=0;i<a.length;i++){
+            a[i].style.display='none'
+        }
     }
 
 }
