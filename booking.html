@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <H1>Đăng Ký du lịch</H1>
+
+    <table class="table table-bordered border-primary">
+    <tbody>
+      <tr>
+        <td>Họ và tên</td>
+        <td><input type="text" id="name"></td>
+      </tr>
+      <tr>
+        <td>Địa chỉ</td>
+        <td><input type="text" id="address"></td>
+      </tr>
+      <tr>
+        <td >Điện thoại</td>
+        <td><input type="text" id="phone"></td>
+      </tr>
+      <tr>
+        <td >Khách Việt Nam</td>
+        <td><input type="checkbox" id="Vn"></td>
+      </tr>
+      <tr>
+        <td >Chọn tour</td>
+        <td><input type="text" id="tour"></td>
+      </tr>
+      <tr>
+        <td >Phương tiện</td>
+        <td style="display: flex;">
+            <input type="radio" style="width: 15px; margin-top:5px ;margin-right: 10px;" id="mb">
+            <p>Máy bay</p>
+            <input id="eto" type="radio" style="width: 15px; margin-top:5px ;margin-right: 10px;margin-left: 30px;">
+            <p>Xe ô tô</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+            <div>
+                <p>Số lượng đoàn khách</p>
+            </div>
+            <div style="display: flex;margin-left: 100px;">
+            <p style="width:100px">Người lớn</p>
+            <input id="nl" type="text" style="height: 30px; width: 40px;">
+            <p style="width:70px;margin-left: 30px;">Trẻ em</p>
+            <input id="te" type="text" style="height: 30px; width: 40px;">
+            </div>
+        </td>
+      </tr>
+      <tr>
+        <td >Ghi chú thêm</td>
+        <td><input type="text" width=""></td>
+      </tr>
+      <tr>
+        <td colspan="2" ><button style="margin-left: 250px;" onclick="Submit()">Đồng ý</button></td>
+      </tr>
+      <tr>
+        <td colspan="2">Bạn đã đăng ký thành công</td>
+      </tr>
+    </tbody>
+  <!--colspan="2"-->
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
